@@ -14,32 +14,64 @@
 
 <nav class="navbar">
   <div class="container">
-    <a href="index.html" class="logo"><div class="logo-icon">HM</div><span class="logo-text">HI<span>MICROWAVE</span></span></a>
-    <div class="nav-links" id="navLinks">
-      <div class="nav-item"><a href="index.html">Home</a></div>
-      <div class="nav-item">
-        <a href="products.html">Products <span class="arrow">&#9662;</span></a>
-        <div class="nav-dropdown">
-          <div class="nav-dropdown-grid">
-            <div class="nav-dropdown-col">
-              <h5>Amplifiers</h5><a href="products.html?cat=pa">Power Amplifier</a><a href="products.html?cat=lna">Low Noise Amplifier</a>
-              <h5 style="margin-top:16px;">Switches</h5><a href="products.html?cat=switches">PIN Switch</a><a href="products.html?cat=attenuators">Attenuator</a>
-            </div>
-            <div class="nav-dropdown-col">
-              <h5>Passive Components</h5><a href="products.html?cat=isolators">Isolator & Circulator</a><a href="products.html?cat=dividers">Power Divider</a><a href="products.html?cat=couplers">Coupler</a><a href="products.html?cat=filters">Filter</a>
-            </div>
-            <div class="nav-dropdown-col">
-              <h5>Best Sellers</h5><a href="products.html?cat=bestseller">Best Seller PA</a><a href="products.html" style="color:var(--red);margin-top:8px;">View All &rarr;</a>
+    <a href="index.html" class="logo">    <a href="index.html" class="logo">
+      <div class="logo-icon">HM</div>
+      <span class="logo-text">HI<span>MICROWAVE</span></span>
+    </a>
+    <div class="nav-row">
+      <div class="nav-links" id="navLinks">
+        <div class="nav-item">
+          <a href="index.html">Home</a>
+        </div>
+        <div class="nav-item">
+          <a href="javascript:;">Products <span class="arrow">&#9662;</span></a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-grid">
+              <div class="nav-dropdown-col">
+                <h5>Amplifiers</h5>
+                <a href="products.html?cat=pa">Power Amplifier</a>
+                <a href="products.html?cat=lna">Low Noise Amplifier</a>
+                <h5 style="margin-top:14px;">Switches</h5>
+                <a href="products.html?cat=switches">PIN Switch</a>
+                <a href="products.html?cat=attenuators">Attenuator</a>
+                <a href="products.html?cat=phaseshifters">Phase Shifter</a>
+              </div>
+              <div class="nav-dropdown-col">
+                <h5>Passive</h5>
+                <a href="products.html?cat=isolators">Isolator & Circulator</a>
+                <a href="products.html?cat=dividers">Power Divider</a>
+                <a href="products.html?cat=couplers">Coupler</a>
+                <a href="products.html?cat=hybrids">Hybrid</a>
+                <a href="products.html?cat=filters">Filter</a>
+                <a href="products.html?cat=ceramicfilters">Ceramic Filter</a>
+                <a href="products.html?cat=bestseller" style="color:var(--red);margin-top:4px;">Best Seller PA &rarr;</a>
+              </div>
             </div>
           </div>
         </div>
+        <div class="nav-item"><a href="about.html">About Us</a></div>
+        <div class="nav-item"><a href="contact.html" class="active">Contact</a></div>
+        <div class="nav-item"><a href="contact.html" class="btn-nav">Request Quote</a></div>
       </div>
-      <div class="nav-item"><a href="about.html">About</a></div>
-      <div class="nav-item"><a href="contact.html" class="btn-nav active">Get Quote</a></div>
+      <div class="nav-right">
+        <div class="nav-search">
+          <input type="text" placeholder="Search" onkeydown="if(event.key==='Enter'){window.location='products.html?search='+this.value;}">
+          <span style="color:var(--gray);font-size:0.7rem;">&#128269;</span>
+        </div>
+        <div class="nav-lang">
+          <button class="nav-lang-btn">EN <span class="arrow">&#9662;</span></button>
+          <div class="nav-lang-dropdown">
+            <a href="#">English</a>
+            <a href="#">Русский</a>
+            <a href="#">Español</a>
+            <a href="#">中文</a>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"><span></span><span></span><span></span></div>
-  </div>
-</nav>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
+      <span></span><span></span><span></span>
+    </div></nav>
 
 <div class="breadcrumb"><div class="container"><a href="index.html">Home</a> | <span>Contact Us</span></div></div>
 
@@ -99,7 +131,7 @@
     <div class="footer-grid">
       <div class="footer-brand"><span class="logo-text" style="color:#fff;font-weight:700;font-size:1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span><p>Professional RF & microwave component supplier.</p></div>
       <div class="footer-col"><h5>Products</h5><a href="products.html?cat=pa">Power Amplifier</a><a href="products.html?cat=lna">Low Noise Amplifier</a><a href="products.html?cat=switches">PIN Switch</a></div>
-      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html" class="active">Contact</a></div>
       <div class="footer-col"><h5>Contact</h5><a>Shenzhen, China</a><a href="mailto:sales@himicrowave.com">sales@himicrowave.com</a></div>
     </div>
     <div class="footer-bottom"><span>&copy; 2026 HiMicrowave. All rights reserved.</span><span>RF & Microwave Solutions</span></div>

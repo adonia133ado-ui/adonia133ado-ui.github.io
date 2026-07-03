@@ -49,7 +49,7 @@ img { max-width: 100%; height: auto; display: block; }
 .text-center { text-align: center; }
 .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
 
-/* === NAVBAR (RF Lambda style dropdown) === */
+/* === NAVBAR (RF Lambda style) === */
 .navbar {
   position: fixed;
   top: 0; left: 0; width: 100%;
@@ -81,24 +81,28 @@ img { max-width: 100%; height: auto; display: block; }
 .logo-text { color: var(--white); font-weight: 700; font-size: 1.05rem; letter-spacing: 1px; }
 .logo-text span { color: var(--red); }
 
-.nav-links { display: flex; align-items: center; gap: 4px; }
-.nav-item {
-  position: relative;
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
 }
+.nav-links { display: flex; align-items: center; gap: 2px; }
+.nav-item { position: relative; }
 .nav-item > a {
   display: flex; align-items: center; gap: 4px;
   color: rgba(255,255,255,0.7);
-  padding: 8px 16px;
-  font-size: 0.82rem;
+  padding: 8px 14px;
+  font-size: 0.8rem;
   font-weight: 500;
   transition: color 0.2s;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 .nav-item > a:hover, .nav-item > a.active { color: var(--red); }
-.nav-item > a .arrow { font-size: 0.6rem; margin-left: 2px; }
+.nav-item > a .arrow { font-size: 0.55rem; margin-left: 3px; }
 
-/* Mega dropdown */
+/* Dropdown menu */
 .nav-dropdown {
   display: none;
   position: absolute;
@@ -107,40 +111,78 @@ img { max-width: 100%; height: auto; display: block; }
   background: #111;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 8px;
-  padding: 20px;
-  min-width: 700px;
+  padding: 16px;
+  min-width: 600px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.5);
   z-index: 100;
 }
 .nav-item:hover .nav-dropdown { display: block; }
-.nav-dropdown-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-}
+.nav-dropdown-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .nav-dropdown-col h5 {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--red);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  padding-bottom: 6px;
+  font-size: 0.72rem; font-weight: 600; color: var(--red);
+  text-transform: uppercase; letter-spacing: 1px;
+  margin-bottom: 8px; padding-bottom: 4px;
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.nav-dropdown-col a {
-  display: block;
-  font-size: 0.82rem;
-  color: var(--gray);
-  padding: 5px 0;
-  transition: color 0.2s;
-}
+.nav-dropdown-col a { display: block; font-size: 0.8rem; color: var(--gray); padding: 4px 0; transition: color 0.2s; }
 .nav-dropdown-col a:hover { color: var(--red); }
+
+/* Nav right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nav-search {
+  display: flex;
+  align-items: center;
+  background: var(--dark2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 0 10px;
+}
+.nav-search input {
+  background: transparent;
+  border: none;
+  color: var(--white);
+  padding: 6px 8px;
+  font-size: 0.78rem;
+  font-family: var(--font);
+  width: 120px;
+  outline: none;
+}
+.nav-search input::placeholder { color: var(--gray); }
+
+.nav-lang {
+  position: relative;
+}
+.nav-lang-btn {
+  display: flex; align-items: center; gap: 4px;
+  color: var(--gray); font-size: 0.75rem; text-transform: uppercase;
+  cursor: pointer; padding: 4px 8px; border-radius: 4px;
+  transition: color 0.2s;
+  background: transparent; border: none; font-family: var(--font);
+}
+.nav-lang-btn:hover { color: var(--red); }
+.nav-lang-dropdown {
+  display: none;
+  position: absolute; top: 100%; right: 0;
+  background: #111; border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px; padding: 8px; min-width: 120px;
+  z-index: 100;
+}
+.nav-lang:hover .nav-lang-dropdown { display: block; }
+.nav-lang-dropdown a {
+  display: block; padding: 6px 12px; font-size: 0.78rem;
+  color: var(--gray); transition: color 0.2s;
+}
+.nav-lang-dropdown a:hover { color: var(--red); }
 
 .nav-item .btn-nav {
   background: var(--red); color: #fff !important;
-  padding: 8px 20px; border-radius: 6px;
-  font-weight: 600;
+  padding: 8px 18px; border-radius: 6px; font-weight: 600;
+  text-transform: none; letter-spacing: 0;
+  font-size: 0.8rem;
 }
 .nav-item .btn-nav:hover { background: var(--red-dark); }
 
