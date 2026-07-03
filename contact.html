@@ -8,85 +8,55 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <title>Contact Us | HiMicrowave</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact HiMicrowave",
-    "description": "Get in touch for RF & microwave component inquiries, quotations, and support.",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "HiMicrowave",
-      "email": "sales@himicrowave.com",
-      "contactType": "sales"
-    }
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ContactPage","name":"Contact HiMicrowave","mainEntity":{"@type":"Organization","name":"HiMicrowave","email":"sales@himicrowave.com","contactType":"sales"}}</script>
 </head>
 <body>
 
 <nav class="navbar">
   <div class="container">
-    <a href="index.html" class="logo">
-      <div class="logo-icon">HM</div>
-      <span class="logo-text">HI<span>MICROWAVE</span></span>
-    </a>
+    <a href="index.html" class="logo"><div class="logo-icon">HM</div><span class="logo-text">HI<span>MICROWAVE</span></span></a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="btn-nav active">Get Quote</a>
+      <div class="nav-item"><a href="index.html">Home</a></div>
+      <div class="nav-item">
+        <a href="products.html">Products <span class="arrow">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-grid">
+            <div class="nav-dropdown-col">
+              <h5>Amplifiers</h5><a href="products.html?cat=pa">Power Amplifier</a><a href="products.html?cat=lna">Low Noise Amplifier</a>
+              <h5 style="margin-top:16px;">Switches</h5><a href="products.html?cat=switches">PIN Switch</a><a href="products.html?cat=attenuators">Attenuator</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <h5>Passive Components</h5><a href="products.html?cat=isolators">Isolator & Circulator</a><a href="products.html?cat=dividers">Power Divider</a><a href="products.html?cat=couplers">Coupler</a><a href="products.html?cat=filters">Filter</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <h5>Best Sellers</h5><a href="products.html?cat=bestseller">Best Seller PA</a><a href="products.html" style="color:var(--red);margin-top:8px;">View All &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="about.html">About</a></div>
+      <div class="nav-item"><a href="contact.html" class="btn-nav active">Get Quote</a></div>
     </div>
-    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
-      <span></span><span></span><span></span>
-    </div>
+    <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')"><span></span><span></span><span></span></div>
   </div>
 </nav>
 
-<section class="page-header">
-  <div class="container">
-    <h1>Contact Us</h1>
-    <p>Get a quote, ask a technical question, or discuss a custom requirement. We respond within 24 hours.</p>
-  </div>
-</section>
+<div class="breadcrumb"><div class="container"><a href="index.html">Home</a> | <span>Contact Us</span></div></div>
 
-<section class="contact-section section">
+<section class="page-header"><div class="container"><h1>Contact Us</h1><p>Get a quote, ask a technical question, or discuss a custom requirement. We respond within 24 hours.</p></div></section>
+
+<section class="section">
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
         <h3>Get In Touch</h3>
-        <div class="contact-item">
-          <div class="contact-item-icon">&#128205;</div>
-          <div>
-            <h4>Office</h4>
-            <p>Shenzhen, Guangdong, China</p>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">&#9993;</div>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:sales@himicrowave.com">sales@himicrowave.com</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">&#128222;</div>
-          <div>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/86138xxxxxxxx" target="_blank">+86 138 XXXX XXXX</a>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-item-icon">&#128337;</div>
-          <div>
-            <h4>Response Time</h4>
-            <p>Within 24 hours on business days</p>
-          </div>
-        </div>
-
-        <div style="margin-top:40px;padding:24px;background:var(--dark2);border-radius:10px;border:1px solid rgba(255,255,255,0.06);">
-          <h4 style="margin-bottom:12px;">Quick Inquiry Tips</h4>
-          <ul style="font-size:0.85rem;color:var(--gray);line-height:2;">
+        <div class="contact-item"><div class="contact-item-icon">&#128205;</div><div><h4>Office</h4><p>Shenzhen, Guangdong, China</p></div></div>
+        <div class="contact-item"><div class="contact-item-icon">&#9993;</div><div><h4>Email</h4><a href="mailto:sales@himicrowave.com">sales@himicrowave.com</a></div></div>
+        <div class="contact-item"><div class="contact-item-icon">&#128222;</div><div><h4>WhatsApp</h4><a href="https://wa.me/86138xxxxxxxx" target="_blank">+86 138 XXXX XXXX</a></div></div>
+        <div class="contact-item"><div class="contact-item-icon">&#128337;</div><div><h4>Response Time</h4><p>Within 24 hours on business days</p></div></div>
+        <div style="margin-top:32px;padding:20px;background:var(--dark2);border-radius:8px;border:1px solid rgba(255,255,255,0.06);">
+          <h4 style="margin-bottom:10px;font-size:0.9rem;">Quick Inquiry Tips</h4>
+          <ul style="font-size:0.8rem;color:var(--gray);line-height:2;">
             <li>&#8226; Include part numbers you're interested in</li>
             <li>&#8226; Mention quantity requirements for best pricing</li>
             <li>&#8226; For custom specs, describe frequency, gain, and power needs</li>
@@ -100,35 +70,24 @@
         <form action="https://formsubmit.co/sales@himicrowave.com" method="POST" target="_blank">
           <input type="hidden" name="_subject" value="HiMicrowave Website Inquiry">
           <input type="hidden" name="_captcha" value="true">
-          <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" name="name" required placeholder="John Smith">
-          </div>
-          <div class="form-group">
-            <label>Email *</label>
-            <input type="email" name="email" required placeholder="john@company.com">
-          </div>
-          <div class="form-group">
-            <label>Company</label>
-            <input type="text" name="company" placeholder="Your company name">
-          </div>
+          <div class="form-group"><label>Your Name *</label><input type="text" name="name" required placeholder="John Smith"></div>
+          <div class="form-group"><label>Email *</label><input type="email" name="email" required placeholder="john@company.com"></div>
+          <div class="form-group"><label>Company</label><input type="text" name="company" placeholder="Your company name"></div>
           <div class="form-group">
             <label>Product Interest</label>
             <select name="product_type">
               <option value="">Select product category</option>
-              <option value="amplifiers">RF Amplifiers</option>
-              <option value="filters">Filters</option>
-              <option value="combiners">Combiners & Dividers</option>
-              <option value="waveguide">Waveguide</option>
-              <option value="custom">Custom / Other</option>
+              <option value="pa">Power Amplifier</option>
+              <option value="lna">Low Noise Amplifier</option>
+              <option value="switch">PIN Switch / Attenuator</option>
+              <option value="passive">Isolator / Circulator / Divider / Coupler</option>
+              <option value="filter">Filter</option>
+              <option value="other">Other / Custom</option>
             </select>
           </div>
-          <div class="form-group">
-            <label>Message *</label>
-            <textarea name="message" required placeholder="Please describe your requirements — include part numbers, frequencies, quantity, and any special requests."></textarea>
-          </div>
+          <div class="form-group"><label>Message *</label><textarea name="message" required placeholder="Please describe your requirements \u2014 include part numbers, frequencies, quantity, and special requests."></textarea></div>
           <button type="submit" class="btn-submit">Send Inquiry</button>
-          <p style="font-size:0.75rem;color:var(--gray);margin-top:12px;text-align:center;">We respect your privacy. Your information will not be shared.</p>
+          <p style="font-size:0.7rem;color:var(--gray);margin-top:10px;text-align:center;">We respect your privacy. Your information will not be shared.</p>
         </form>
       </div>
     </div>
@@ -138,38 +97,16 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand">
-        <span class="logo-text" style="color:#fff;font-weight:700;font-size:1.2rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
-        <p>Your trusted partner in RF & microwave components. Serving defense, telecom, and industrial customers worldwide.</p>
-      </div>
-      <div class="footer-col">
-        <h5>Products</h5>
-        <a href="products.html?cat=amplifiers">RF Amplifiers</a>
-        <a href="products.html?cat=filters">Filters</a>
-        <a href="products.html?cat=combiners">Combiners & Dividers</a>
-        <a href="products.html?cat=waveguide">Waveguide</a>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
-      </div>
-      <div class="footer-col">
-        <h5>Contact</h5>
-        <a>Shenzhen, China</a>
-        <a href="mailto:sales@himicrowave.com">sales@himicrowave.com</a>
-        <a href="https://wa.me/86138xxxxxxxx" target="_blank">WhatsApp</a>
-      </div>
+      <div class="footer-brand"><span class="logo-text" style="color:#fff;font-weight:700;font-size:1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span><p>Professional RF & microwave component supplier.</p></div>
+      <div class="footer-col"><h5>Products</h5><a href="products.html?cat=pa">Power Amplifier</a><a href="products.html?cat=lna">Low Noise Amplifier</a><a href="products.html?cat=switches">PIN Switch</a></div>
+      <div class="footer-col"><h5>Company</h5><a href="about.html">About Us</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Contact</h5><a>Shenzhen, China</a><a href="mailto:sales@himicrowave.com">sales@himicrowave.com</a></div>
     </div>
-    <div class="footer-bottom">
-      <span>&copy; 2026 HiMicrowave. All rights reserved.</span>
-      <span>RF & Microwave Solutions</span>
-    </div>
+    <div class="footer-bottom"><span>&copy; 2026 HiMicrowave. All rights reserved.</span><span>RF & Microwave Solutions</span></div>
   </div>
 </footer>
 
 <script>
-// Pre-fill product from URL param
 const params = new URLSearchParams(window.location.search);
 const product = params.get('product');
 if (product) {
@@ -177,9 +114,7 @@ if (product) {
   if (msg) msg.value = `Inquiry regarding: ${product}\n\n`;
 }
 document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('active');
-  });
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
 });
 </script>
 </body>

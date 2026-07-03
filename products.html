@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HiMicrowave RF & microwave component catalog — Power Amplifiers, Low Noise Amplifiers, PIN Switches, Attenuators, Isolators, Couplers, Filters, and more." />
+  <meta name="description" content="HiMicrowave product catalog — Power Amplifiers, Low Noise Amplifiers, PIN Switches, Attenuators, Isolators, Circulators, Couplers, Filters." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
@@ -18,10 +18,47 @@
       <span class="logo-text">HI<span>MICROWAVE</span></span>
     </a>
     <div class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="products.html" class="active">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="btn-nav">Get Quote</a>
+      <div class="nav-item">
+        <a href="index.html">Home</a>
+      </div>
+      <div class="nav-item">
+        <a href="products.html" class="active">Products <span class="arrow">&#9662;</span></a>
+        <div class="nav-dropdown">
+          <div class="nav-dropdown-grid">
+            <div class="nav-dropdown-col">
+              <h5>Amplifiers</h5>
+              <a href="products.html?cat=pa">Power Amplifier</a>
+              <a href="products.html?cat=lna">Low Noise Amplifier</a>
+              <h5 style="margin-top:16px;">Switches</h5>
+              <a href="products.html?cat=switches">PIN Switch</a>
+              <a href="products.html?cat=attenuators">Attenuator</a>
+              <a href="products.html?cat=phaseshifters">Phase Shifter</a>
+              <a href="products.html?cat=limiters">Limiter</a>
+              <a href="products.html?cat=detectors">Detector</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <h5>Passive Components</h5>
+              <a href="products.html?cat=isolators">Isolator & Circulator</a>
+              <a href="products.html?cat=dividers">Power Divider</a>
+              <a href="products.html?cat=couplers">Coupler</a>
+              <a href="products.html?cat=hybrids">Hybrid</a>
+              <a href="products.html?cat=filters">Filter</a>
+              <a href="products.html?cat=ceramicfilters">Ceramic Filter</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <h5>Best Sellers</h5>
+              <a href="products.html?cat=bestseller">Best Seller PA</a>
+              <a href="products.html" style="color:var(--red);margin-top:8px;">View All Products &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="about.html">About</a>
+      </div>
+      <div class="nav-item">
+        <a href="contact.html" class="btn-nav">Get Quote</a>
+      </div>
     </div>
     <div class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">
       <span></span><span></span><span></span>
@@ -29,29 +66,39 @@
   </div>
 </nav>
 
-<section class="page-header">
+<div class="breadcrumb">
   <div class="container">
-    <h1>Product Catalog</h1>
-    <p>Complete RF & microwave component portfolio. Filter by category or search by parameters.</p>
+    <a href="index.html">Home</a> | <span id="bcCategory">All Products</span>
+  </div>
+</div>
+
+<section class="page-header" style="padding:90px 0 30px;">
+  <div class="container">
+    <h1 id="pageTitle">Product Catalog</h1>
+    <p id="pageDesc">Browse our complete RF & microwave component portfolio. Filter by category or search by parameters.</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:20px;">
+<section class="section" style="padding-top:10px;">
   <div class="container">
-    <!-- Category Tabs -->
+    <!-- Subcategory tabs -->
     <div class="cat-tabs" id="catTabs">
-      <div class="cat-tab active" onclick="switchCategory('all',this)">All</div>
-      <div class="cat-tab" onclick="switchCategory('amplifiers',this)">Amplifiers</div>
-      <div class="cat-tab" onclick="switchCategory('switches',this)">Switches</div>
-      <div class="cat-tab" onclick="switchCategory('passive',this)">Passive</div>
-      <div class="cat-tab" onclick="switchCategory('filters',this)">Filters</div>
+      <div class="cat-tab active" data-cat="all" onclick="switchCategory('all',this)">All</div>
+      <div class="cat-tab" data-cat="pa" onclick="switchCategory('pa',this)">Power Amplifier</div>
+      <div class="cat-tab" data-cat="lna" onclick="switchCategory('lna',this)">Low Noise Amp</div>
+      <div class="cat-tab" data-cat="switches" onclick="switchCategory('switches',this)">PIN Switch</div>
+      <div class="cat-tab" data-cat="attenuators" onclick="switchCategory('attenuators',this)">Attenuator</div>
+      <div class="cat-tab" data-cat="phaseshifters" onclick="switchCategory('phaseshifters',this)">Phase Shifter</div>
+      <div class="cat-tab" data-cat="isolators" onclick="switchCategory('isolators',this)">Isolator</div>
+      <div class="cat-tab" data-cat="dividers" onclick="switchCategory('dividers',this)">Divider</div>
+      <div class="cat-tab" data-cat="couplers" onclick="switchCategory('couplers',this)">Coupler</div>
+      <div class="cat-tab" data-cat="filters" onclick="switchCategory('filters',this)">Filter</div>
     </div>
 
-    <!-- Filter Bar -->
-    <div class="filter-bar" id="filterBar">
+    <div class="filter-bar">
       <div class="filter-group">
         <label>Search</label>
-        <input type="text" id="searchModel" placeholder="Model #..." style="min-width:130px;">
+        <input type="text" id="searchModel" placeholder="Model #..." style="min-width:120px;">
       </div>
       <div class="filter-group">
         <label>Freq Min (GHz)</label>
@@ -67,7 +114,7 @@
       </div>
       <div class="filter-group">
         <label>&nbsp;</label>
-        <div style="display:flex;gap:8px;">
+        <div style="display:flex;gap:6px;">
           <button class="btn-filter" onclick="applyFilter()">Search</button>
           <button class="btn-reset" onclick="resetFilter()">Reset</button>
         </div>
@@ -76,7 +123,6 @@
 
     <p class="results-count" id="resultsCount"></p>
 
-    <!-- Product Table -->
     <div class="product-table-wrap">
       <table class="product-table" id="productTable">
         <thead>
@@ -87,6 +133,7 @@
             <th>Gain (dB)</th>
             <th>P1dB (dBm)</th>
             <th>NF (dB)</th>
+            <th>VSWR</th>
             <th style="text-align:center;">Datasheet</th>
             <th style="text-align:center;">Quote</th>
           </tr>
@@ -96,8 +143,8 @@
     </div>
 
     <div id="emptyState" style="display:none;text-align:center;padding:60px 24px;">
-      <p style="font-size:1.1rem;color:#888;margin-bottom:12px;">No products match your criteria.</p>
-      <button onclick="resetFilter()" class="btn-outline" style="padding:10px 24px;cursor:pointer;">Reset Filters</button>
+      <p style="font-size:1rem;color:#888;margin-bottom:12px;">No products match your criteria.</p>
+      <button onclick="resetFilter()" class="btn-outline" style="padding:8px 20px;cursor:pointer;">Reset Filters</button>
     </div>
   </div>
 </section>
@@ -106,15 +153,21 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo-text" style="color:#fff;font-weight:700;font-size:1.1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
+        <span class="logo-text" style="color:#fff;font-weight:700;font-size:1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
         <p>Professional RF & microwave component supplier. Serving defense, telecom, and industrial customers worldwide.</p>
       </div>
       <div class="footer-col">
         <h5>Products</h5>
-        <a href="products.html" onclick="switchCategory('amplifiers',null)">Amplifiers</a>
-        <a href="products.html" onclick="switchCategory('switches',null)">Switches</a>
-        <a href="products.html" onclick="switchCategory('passive',null)">Passive Components</a>
-        <a href="products.html" onclick="switchCategory('filters',null)">Filters</a>
+        <a href="products.html?cat=pa">Power Amplifier</a>
+        <a href="products.html?cat=lna">Low Noise Amplifier</a>
+        <a href="products.html?cat=switches">PIN Switch</a>
+        <a href="products.html?cat=isolators">Isolator & Circulator</a>
+        <a href="products.html?cat=filters">Filter</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
@@ -134,17 +187,64 @@
 let allProducts = [];
 let currentCategory = 'all';
 
+const catNames = {
+  'all': 'All Products', 'pa': 'Power Amplifier', 'lna': 'Low Noise Amplifier',
+  'switches': 'PIN Switch', 'attenuators': 'Attenuator', 'phaseshifters': 'Phase Shifter',
+  'limiters': 'Limiter', 'detectors': 'Detector', 'isolators': 'Isolator & Circulator',
+  'dividers': 'Power Divider', 'couplers': 'Coupler', 'hybrids': 'Hybrid',
+  'filters': 'Filter', 'ceramicfilters': 'Ceramic Filter', 'bestseller': 'Best Seller PA',
+  'amplifiers': 'Amplifiers', 'passive': 'Passive Components', 'allpassive': 'Passive'
+};
+
+// Map old category names to new subcategory filter
+function productToSubcat(p) {
+  const m = p.model;
+  if (m.startsWith('HILNA')) return 'lna';
+  if (m.startsWith('HIPA') || m.startsWith('HIP')) return 'pa';
+  if (p.category === 'amplifiers') return 'pa';
+  if (p.category === 'switches') return 'switches';
+  if (p.category === 'attenuators') return 'attenuators';
+  if (p.category === 'phaseshifters') return 'phaseshifters';
+  if (p.category === 'limiters') return 'limiters';
+  if (p.category === 'detectors') return 'detectors';
+  if (p.category === 'isolators') return 'isolators';
+  if (p.category === 'dividers') return 'dividers';
+  if (p.category === 'couplers') return 'couplers';
+  if (p.category === 'hybrids') return 'hybrids';
+  if (p.category === 'filters') return 'filters';
+  if (p.category === 'ceramicfilters') return 'ceramicfilters';
+  if (p.category === 'bestseller') return 'bestseller';
+  if (p.category === 'passive') return 'isolators';
+  if (p.category === 'allpassive') return 'isolators';
+  return 'all';
+}
+
+function getTypeLabel(p) {
+  const subcat = productToSubcat(p);
+  const labels = {
+    'pa': 'PA', 'lna': 'LNA', 'switches': 'Switch', 'attenuators': 'Attn',
+    'phaseshifters': 'PShift', 'limiters': 'Limit', 'detectors': 'Det',
+    'isolators': 'Iso/Circ', 'dividers': 'Div', 'couplers': 'Cpl', 'hybrids': 'Hybrid',
+    'filters': 'Filter', 'ceramicfilters': 'CerFilt', 'bestseller': 'PA',
+    'amplifiers': 'Amp', 'passive': 'Passive'
+  };
+  return labels[subcat] || 'Other';
+}
+
 fetch('products.json')
   .then(r => r.json())
   .then(data => {
     allProducts = data;
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
-    if (cat) switchCategory(cat, null);
-    else renderTable();
+    if (cat && catNames[cat]) {
+      switchCategory(cat, document.querySelector(`[data-cat="${cat}"]`));
+    } else {
+      renderTable();
+    }
   })
   .catch(() => {
-    document.getElementById('tableBody').innerHTML = '<tr><td colspan="8" style="text-align:center;color:#888;padding:40px;">Loading product data...</td></tr>';
+    document.getElementById('tableBody').innerHTML = '<tr><td colspan="9" style="text-align:center;color:#888;padding:40px;">Loading...</td></tr>';
   });
 
 function switchCategory(cat, el) {
@@ -152,11 +252,18 @@ function switchCategory(cat, el) {
   if (el) {
     document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
     el.classList.add('active');
-  } else {
-    document.querySelectorAll('.cat-tab').forEach(t => {
-      t.classList.toggle('active', t.textContent.trim().toLowerCase() === cat || (cat === 'all' && t.textContent.trim() === 'All'));
-    });
   }
+  const name = catNames[cat] || 'Products';
+  document.getElementById('bcCategory').textContent = name;
+  document.getElementById('pageTitle').textContent = name;
+  const descs = {
+    'pa': 'High-power solid-state amplifiers covering wide frequency ranges. Ideal for radar, EW, and communication systems.',
+    'lna': 'Ultra-low noise amplifiers with excellent noise figure and high dynamic range for receiver front-ends.',
+    'switches': 'Broadband PIN diode switches for RF and microwave signal routing applications.',
+    'isolators': 'Ferrite circulators and isolators in coaxial, drop-in, and waveguide packages.',
+    'filters': 'Bandpass, lowpass, highpass filters in ceramic, cavity, and LC topologies.',
+  };
+  document.getElementById('pageDesc').textContent = descs[cat] || 'Browse our RF & microwave component portfolio. Filter by category or search by parameters.';
   renderTable();
 }
 
@@ -167,9 +274,7 @@ function resetFilter() {
   document.getElementById('freqMin').value = '';
   document.getElementById('freqMax').value = '';
   document.getElementById('gainMin').value = '';
-  currentCategory = 'all';
-  document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.textContent.trim() === 'All'));
-  renderTable();
+  switchCategory('all', document.querySelector('[data-cat="all"]'));
 }
 
 function renderTable() {
@@ -179,7 +284,16 @@ function renderTable() {
   const gainMin = parseFloat(document.getElementById('gainMin').value) || -999;
 
   let filtered = allProducts.filter(p => {
-    if (currentCategory !== 'all' && p.category !== currentCategory) return false;
+    if (currentCategory !== 'all') {
+      const pCat = productToSubcat(p);
+      if (currentCategory === 'bestseller') {
+        // Best seller models from old site
+        const bs = ['HIPA01025353','HIPA02025353','HIPA02065250','HIPA02065555','HIPA07134747','HIPA07135050','HIPA08125050','HIPA10124747','HIPA10135050','HIPA13155750','HIPA13155753','HIPA15164643','HIPAT3025250','HIPAT3035250','HIPAT4025250','HIPAT4035049','HIPAT7015853','HIPAT7065250','HIPA101240VCO'];
+        if (!bs.some(b => p.model.toUpperCase().includes(b))) return false;
+      } else if (pCat !== currentCategory) {
+        return false;
+      }
+    }
     if (search && !p.model.toUpperCase().includes(search)) return false;
     if (freqMin > 0 && p.freq_max && p.freq_max < freqMin) return false;
     if (freqMax < 999 && p.freq_min && p.freq_min > freqMax) return false;
@@ -203,34 +317,27 @@ function renderTable() {
 
   body.innerHTML = filtered.map(p => {
     const freq = p.freq_min || p.freq_max
-      ? `${p.freq_min}${p.freq_min > 0 ? '–' : ''}${p.freq_max || ''} ${p.freq_unit || 'GHz'}`
+      ? `${p.freq_min}${p.freq_min > 0 ? '–' : ''}${p.freq_max || ''}`
       : '\u2014';
     const gain = p.gain !== null && p.gain !== undefined ? p.gain : '\u2014';
     const p1db = p.p1db !== null && p.p1db !== undefined ? p.p1db : '\u2014';
     const nf = p.nf !== null && p.nf !== undefined ? p.nf : '\u2014';
+    const vswr = p.vswr_in || '\u2014';
     const dsLink = p.datasheet;
-    
-    // Determine type label
-    let typeLabel = p.category || 'Other';
-    if (p.model.startsWith('HILNA')) typeLabel = 'LNA';
-    else if (p.model.startsWith('HIPA') || p.model.startsWith('HIP')) typeLabel = 'PA';
-    else if (p.category === 'amplifiers') typeLabel = 'Amp';
-    else if (p.category === 'switches') typeLabel = 'Switch';
-    else if (p.category === 'passive') typeLabel = 'Passive';
-    else if (p.category === 'filters') typeLabel = 'Filter';
 
     return `<tr>
-      <td style="font-weight:600;">${p.model}</td>
-      <td><span style="background:rgba(224,32,32,0.1);color:#E02020;padding:2px 8px;border-radius:3px;font-size:0.7rem;font-weight:600;">${typeLabel}</span></td>
+      <td>${p.model}</td>
+      <td><span class="type-badge">${getTypeLabel(p)}</span></td>
       <td>${freq}</td>
       <td>${gain}</td>
       <td>${p1db}</td>
       <td>${nf}</td>
+      <td>${vswr}</td>
       <td style="text-align:center;">
-        ${dsLink ? `<a href="${dsLink}" class="btn-table" target="_blank">PDF</a>` : '<span style="color:#555;">—</span>'}
+        ${dsLink ? `<a href="${dsLink}" class="btn-table" target="_blank">PDF</a>` : '<span style="color:#444;">\u2014</span>'}
       </td>
       <td style="text-align:center;">
-        <a href="contact.html?product=${p.model}" class="btn-table-ghost" style="margin-left:0;">Quote</a>
+        <a href="contact.html?product=${p.model}" class="btn-ghost" style="margin-left:0;">Quote</a>
       </td>
     </tr>`;
   }).join('');
