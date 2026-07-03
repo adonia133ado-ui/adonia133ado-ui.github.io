@@ -1,0 +1,93 @@
+{
+  "power-amplifier": {
+    "name": "Power Amplifier",
+    "category": "active-components",
+    "title": "China Power Amplifier manufacturer",
+    "description": "Solid-state wideband power amplifier with frequency range, covering 10MHz~40GHz, average power up to 500W. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "low-noise-amplifier": {
+    "name": "Low Noise Amplifier",
+    "category": "active-components",
+    "title": "customized Low Noise Amplifier factory",
+    "description": "High quality low noise amplifier is the essential component of receiving system, directly reflecting the system sensitivity. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "pin-switch": {
+    "name": "PIN Switch",
+    "category": "active-components",
+    "title": "high quality PIN Switch supplier",
+    "description": "Customized PIN Switch is mainly used to control the transmission path of microwave signal.",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "attenuator": {
+    "name": "Attenuator",
+    "category": "active-components",
+    "title": "China best Attenuator In-Stock",
+    "description": "High quality attenuator is one of the key parts of controlling link signal intensity in microwave system.",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "phase-shifter": {
+    "name": "Phase Shifter",
+    "category": "active-components",
+    "title": "cheap Phase Shifter manufacturer",
+    "description": "China non-dispersive phase shifter is featured by wide frequency range, the phase fluctuates little across the whole frequency range. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "limiter": {
+    "name": "Limiter",
+    "category": "active-components",
+    "title": "high quality Limiter alternatives",
+    "description": "China limiter in-stock, is widely used in receiving end devices, preventing large signal from inputting and damaging the receiving device. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "detector": {
+    "name": "Detector",
+    "category": "active-components",
+    "title": "China customized Detector  supplier",
+    "description": "High quality detector, is an important component used for detecting the microwave signal and outputting DC voltage.",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator": {
+    "name": "Isolator & Circulator",
+    "category": "passive-components",
+    "title": "China High Power Broadband Waveguide|Coaxial  Isolator and Circulator supplier",
+    "description": "Best High Power Broadband Waveguide|Coaxial  Isolator and Circulator factory",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "power-divider": {
+    "name": "Power Divider",
+    "category": "passive-components",
+    "title": "customized Power Divider manufacturer",
+    "description": "High quality Power divider is a component used for carrying out multiple outputs of a signal, it can actualize 64-way signal shunting.",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "coupler": {
+    "name": "Coupler",
+    "category": "passive-components",
+    "title": "high quality Coupler manufacturer",
+    "description": "China Coupler is used for coupling the energy of the microwave signal,  outputting a certain amount of coupling for monitoring purposes.",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "filter": {
+    "name": "Filter",
+    "category": "passive-components",
+    "title": "China best Filter manufacturer",
+    "description": "High quality Filter is a key part of the electronic system, which is used to achieve frequency selection function. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "hybrid": {
+    "name": "Hybrid",
+    "category": "passive-components",
+    "title": "high quality Hybrid In-Stock",
+    "description": "Customized Hybrid is a power combining component which is a necessary part to a high power amplifier. ",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  },
+  "ceramic-filter": {
+    "name": "Ceramic Filter",
+    "category": "passive-components",
+    "title": "China best ceramic filter supplier",
+    "description": "China high quality ceramic filter manufacturer",
+    "text": "rte .pro-tab-content a { // font-size: 0; } .tab-content div { color: #000; font-size: 16px; } .tab_text { font-size: 16px; font-weight: 600; } .primary-img { aspect-ratio: 1; object-fit: contain; } .layout-name { margin: 3rem 0 2rem; } .layout-wrap { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; margin-bottom: 40px; } .layout-wrap>* { width: 100% !important; } .layout-wrap .layout-image { border: 1px solid #000; padding: 10px; } .layout-wrap .layout-imag"
+  }
+}

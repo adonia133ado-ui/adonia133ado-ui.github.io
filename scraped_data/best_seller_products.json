@@ -1,0 +1,135 @@
+{
+  "hipa01025353": {
+    "model": "HIPA01025353",
+    "title": "MODEL HIPA01025353 1.8 2.2 GHz 200W Power Amplifier",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa02025353": {
+    "model": "HIPA02025353",
+    "title": "MODEL HIPA02025353 2.3-2.7 GHz 200W Power Amplifier",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa02065250": {
+    "model": "HIPA02065250",
+    "title": "2 6 GHz 100W Power Amplifier HIPA02065250",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa02065555": {
+    "model": "HIPA02065555",
+    "title": "HIPA02065555",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa07134747": {
+    "model": "HIPA07134747",
+    "title": "HIPA07134747",
+    "description": "",
+    "page_text": "",
+    "tables_found": 2
+  },
+  "hipa07135050": {
+    "model": "HIPA07135050",
+    "title": "HIPA07135050",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa08125050": {
+    "model": "HIPA08125050",
+    "title": "HIPA08125050",
+    "description": "",
+    "page_text": "",
+    "tables_found": 2
+  },
+  "hipa10124747": {
+    "model": "HIPA10124747",
+    "title": "HIPA10124747",
+    "description": "",
+    "page_text": "",
+    "tables_found": 2
+  },
+  "hipa10135050": {
+    "model": "HIPA10135050",
+    "title": "HIPA10135050",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa13155750": {
+    "model": "HIPA13155750",
+    "title": "MODEL HIPA13155750",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa13155753": {
+    "model": "HIPA13155753",
+    "title": "HIPA13155753",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa15164643": {
+    "model": "HIPA15164643",
+    "title": "HIPA15164643",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat3025250": {
+    "model": "HIPAT3025250",
+    "title": "HIPAT3025250",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat3035250": {
+    "model": "HIPAT3035250",
+    "title": "HIPAT3035250",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat4025250": {
+    "model": "HIPAT4025250",
+    "title": "HIPAT4025250",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat4035049": {
+    "model": "HIPAT4035049",
+    "title": "HIPAT4035049",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat7015853": {
+    "model": "HIPAT7015853",
+    "title": "HIPAT7015853",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipat7065250": {
+    "model": "HIPAT7065250",
+    "title": "HIPAT7065250",
+    "description": "",
+    "page_text": "",
+    "tables_found": 3
+  },
+  "hipa101240vco": {
+    "model": "HIPA101240VCO",
+    "title": "HIPA101240VCO 10.7-12.7GHz 10W Power Amplifier with Integrated VCO",
+    "description": "HIPA101240VCO is a 10.7-12.7GHz wideband 10W power amplifier with integrated VCO. It features 40dBm minimum saturated power, max 35W power consumption,...",
+    "page_text": "",
+    "tables_found": 3
+  }
+}

@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HiMicrowave RF & microwave component catalog — Power Amplifiers, Low Noise Amplifiers, Filters, Combiners, Waveguide. Browse by parameter." />
+  <meta name="description" content="HiMicrowave RF & microwave component catalog — Power Amplifiers, Low Noise Amplifiers, PIN Switches, Attenuators, Isolators, Couplers, Filters, and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <title>Products | HiMicrowave — RF & Microwave Components</title>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"Product","name":"HMA-2018 Broadband LNA","category":"RF Amplifier"},{"@type":"Product","name":"HPA-0618 Power Amplifier","category":"RF Amplifier"},{"@type":"Product","name":"HBPF-0408 Bandpass Filter","category":"Filter"}]}
-  </script>
 </head>
 <body>
 
@@ -35,7 +32,7 @@
 <section class="page-header">
   <div class="container">
     <h1>Product Catalog</h1>
-    <p>Browse our RF & microwave component portfolio. Use the filters below to narrow by parameters.</p>
+    <p>Complete RF & microwave component portfolio. Filter by category or search by parameters.</p>
   </div>
 </section>
 
@@ -45,13 +42,17 @@
     <div class="cat-tabs" id="catTabs">
       <div class="cat-tab active" onclick="switchCategory('all',this)">All</div>
       <div class="cat-tab" onclick="switchCategory('amplifiers',this)">Amplifiers</div>
+      <div class="cat-tab" onclick="switchCategory('switches',this)">Switches</div>
+      <div class="cat-tab" onclick="switchCategory('passive',this)">Passive</div>
       <div class="cat-tab" onclick="switchCategory('filters',this)">Filters</div>
-      <div class="cat-tab" onclick="switchCategory('combiners',this)">Combiners</div>
-      <div class="cat-tab" onclick="switchCategory('waveguide',this)">Waveguide</div>
     </div>
 
-    <!-- Filter Bar (RF Lambda style) -->
+    <!-- Filter Bar -->
     <div class="filter-bar" id="filterBar">
+      <div class="filter-group">
+        <label>Search</label>
+        <input type="text" id="searchModel" placeholder="Model #..." style="min-width:130px;">
+      </div>
       <div class="filter-group">
         <label>Freq Min (GHz)</label>
         <input type="number" id="freqMin" placeholder="0" step="0.1" min="0">
@@ -63,22 +64,6 @@
       <div class="filter-group">
         <label>Gain Min (dB)</label>
         <input type="number" id="gainMin" placeholder="0" step="0.1">
-      </div>
-      <div class="filter-group">
-        <label>NF Max (dB)</label>
-        <input type="number" id="nfMax" placeholder="10" step="0.1" min="0">
-      </div>
-      <div class="filter-group">
-        <label>Connector</label>
-        <select id="connector">
-          <option value="">All</option>
-          <option value="SMA">SMA</option>
-          <option value="2.92mm">2.92mm</option>
-          <option value="2.4mm">2.4mm</option>
-          <option value="1.85mm">1.85mm</option>
-          <option value="WR">Waveguide</option>
-          <option value="SMT">SMT</option>
-        </select>
       </div>
       <div class="filter-group">
         <label>&nbsp;</label>
@@ -97,14 +82,13 @@
         <thead>
           <tr>
             <th>Model</th>
-            <th>Description</th>
+            <th>Type</th>
             <th>Freq (GHz)</th>
             <th>Gain (dB)</th>
             <th>P1dB (dBm)</th>
             <th>NF (dB)</th>
-            <th>VSWR</th>
-            <th>Connector</th>
-            <th style="text-align:center;">Action</th>
+            <th style="text-align:center;">Datasheet</th>
+            <th style="text-align:center;">Quote</th>
           </tr>
         </thead>
         <tbody id="tableBody"></tbody>
@@ -123,14 +107,14 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <span class="logo-text" style="color:#fff;font-weight:700;font-size:1.1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
-        <p>Your trusted partner in RF & microwave components. Serving defense, telecom, and industrial customers worldwide.</p>
+        <p>Professional RF & microwave component supplier. Serving defense, telecom, and industrial customers worldwide.</p>
       </div>
       <div class="footer-col">
         <h5>Products</h5>
-        <a href="products.html" onclick="switchCategory('amplifiers',null)">RF Amplifiers</a>
+        <a href="products.html" onclick="switchCategory('amplifiers',null)">Amplifiers</a>
+        <a href="products.html" onclick="switchCategory('switches',null)">Switches</a>
+        <a href="products.html" onclick="switchCategory('passive',null)">Passive Components</a>
         <a href="products.html" onclick="switchCategory('filters',null)">Filters</a>
-        <a href="products.html" onclick="switchCategory('combiners',null)">Combiners & Dividers</a>
-        <a href="products.html" onclick="switchCategory('waveguide',null)">Waveguide</a>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
@@ -160,7 +144,7 @@ fetch('products.json')
     else renderTable();
   })
   .catch(() => {
-    document.getElementById('tableBody').innerHTML = '<tr><td colspan="9" style="text-align:center;color:#888;padding:40px;">Loading product data...</td></tr>';
+    document.getElementById('tableBody').innerHTML = '<tr><td colspan="8" style="text-align:center;color:#888;padding:40px;">Loading product data...</td></tr>';
   });
 
 function switchCategory(cat, el) {
@@ -179,30 +163,27 @@ function switchCategory(cat, el) {
 function applyFilter() { renderTable(); }
 
 function resetFilter() {
+  document.getElementById('searchModel').value = '';
   document.getElementById('freqMin').value = '';
   document.getElementById('freqMax').value = '';
   document.getElementById('gainMin').value = '';
-  document.getElementById('nfMax').value = '';
-  document.getElementById('connector').value = '';
   currentCategory = 'all';
   document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.textContent.trim() === 'All'));
   renderTable();
 }
 
 function renderTable() {
+  const search = document.getElementById('searchModel').value.toUpperCase();
   const freqMin = parseFloat(document.getElementById('freqMin').value) || 0;
   const freqMax = parseFloat(document.getElementById('freqMax').value) || 999;
   const gainMin = parseFloat(document.getElementById('gainMin').value) || -999;
-  const nfMax = parseFloat(document.getElementById('nfMax').value) || 999;
-  const conn = document.getElementById('connector').value.toUpperCase();
 
   let filtered = allProducts.filter(p => {
     if (currentCategory !== 'all' && p.category !== currentCategory) return false;
-    if (freqMin > 0 && p.freq_max < freqMin) return false;
-    if (freqMax < 999 && p.freq_min > freqMax) return false;
+    if (search && !p.model.toUpperCase().includes(search)) return false;
+    if (freqMin > 0 && p.freq_max && p.freq_max < freqMin) return false;
+    if (freqMax < 999 && p.freq_min && p.freq_min > freqMax) return false;
     if (gainMin > -999 && p.gain !== null && p.gain !== undefined && p.gain < gainMin) return false;
-    if (nfMax < 999 && p.nf !== null && p.nf !== undefined && p.nf > nfMax) return false;
-    if (conn && !p.connector.toUpperCase().includes(conn)) return false;
     return true;
   });
 
@@ -221,27 +202,35 @@ function renderTable() {
   count.textContent = `Showing ${filtered.length} product${filtered.length > 1 ? 's' : ''}`;
 
   body.innerHTML = filtered.map(p => {
-    const freq = p.center_freq
-      ? `Center: ${p.center_freq}`
-      : `${p.freq_min}-${p.freq_max}`;
+    const freq = p.freq_min || p.freq_max
+      ? `${p.freq_min}${p.freq_min > 0 ? '–' : ''}${p.freq_max || ''} ${p.freq_unit || 'GHz'}`
+      : '\u2014';
     const gain = p.gain !== null && p.gain !== undefined ? p.gain : '\u2014';
     const p1db = p.p1db !== null && p.p1db !== undefined ? p.p1db : '\u2014';
     const nf = p.nf !== null && p.nf !== undefined ? p.nf : '\u2014';
-    const vswr = p.vswr_in || '\u2014';
-    const dsLink = p.datasheet ? `datasheets/${p.datasheet.split('/').pop()}` : '';
+    const dsLink = p.datasheet;
+    
+    // Determine type label
+    let typeLabel = p.category || 'Other';
+    if (p.model.startsWith('HILNA')) typeLabel = 'LNA';
+    else if (p.model.startsWith('HIPA') || p.model.startsWith('HIP')) typeLabel = 'PA';
+    else if (p.category === 'amplifiers') typeLabel = 'Amp';
+    else if (p.category === 'switches') typeLabel = 'Switch';
+    else if (p.category === 'passive') typeLabel = 'Passive';
+    else if (p.category === 'filters') typeLabel = 'Filter';
 
     return `<tr>
-      <td>${p.model}</td>
-      <td style="color:var(--gray);max-width:220px;">${p.name}</td>
+      <td style="font-weight:600;">${p.model}</td>
+      <td><span style="background:rgba(224,32,32,0.1);color:#E02020;padding:2px 8px;border-radius:3px;font-size:0.7rem;font-weight:600;">${typeLabel}</span></td>
       <td>${freq}</td>
       <td>${gain}</td>
       <td>${p1db}</td>
       <td>${nf}</td>
-      <td>${vswr}</td>
-      <td>${p.connector}</td>
-      <td>
-        ${dsLink ? `<a href="${dsLink}" class="btn-table" target="_blank">PDF</a>` : ''}
-        <a href="contact.html?product=${p.model}" class="btn-table-ghost">Quote</a>
+      <td style="text-align:center;">
+        ${dsLink ? `<a href="${dsLink}" class="btn-table" target="_blank">PDF</a>` : '<span style="color:#555;">—</span>'}
+      </td>
+      <td style="text-align:center;">
+        <a href="contact.html?product=${p.model}" class="btn-table-ghost" style="margin-left:0;">Quote</a>
       </td>
     </tr>`;
   }).join('');

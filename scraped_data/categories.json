@@ -1,0 +1,484 @@
+{
+  "active-components": {
+    "name": "RF MW Component，Ferrite Circulator & Isolator Chinese Manufacturer - HI Microwave",
+    "description": "HI Microwave manufactures Waveguide components,RF Amplifier,RF Switch, RF Filter, RF Coupler, Attenuator, Power Splitter, RF Load,CNC Machining，Waveguide Tuner|Combiner, Ferrite Microstrip|Drop-in|Double-Junction Isolator and Circulator etc.",
+    "subcategories": [
+      {
+        "slug": "power-amplifier",
+        "name": "Power Amplifier",
+        "url": "/product/power-amplifier.html"
+      },
+      {
+        "slug": "low-noise-amplifier",
+        "name": "Low Noise Amplifier",
+        "url": "/product/low-noise-amplifier.html"
+      },
+      {
+        "slug": "pin-switch",
+        "name": "PIN Switch",
+        "url": "/product/pin-switch.html"
+      },
+      {
+        "slug": "attenuator",
+        "name": "Attenuator",
+        "url": "/product/attenuator.html"
+      },
+      {
+        "slug": "phase-shifter",
+        "name": "Phase Shifter",
+        "url": "/product/phase-shifter.html"
+      },
+      {
+        "slug": "limiter",
+        "name": "Limiter",
+        "url": "/product/limiter.html"
+      },
+      {
+        "slug": "detector",
+        "name": "Detector",
+        "url": "/product/detector.html"
+      },
+      {
+        "slug": "ceramic-filter",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter.html"
+      },
+      {
+        "slug": "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator",
+        "name": "Isolator &amp; Circulator",
+        "url": "/product/High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator.html"
+      },
+      {
+        "slug": "power-divider",
+        "name": "Power Divider",
+        "url": "/product/power-divider.html"
+      },
+      {
+        "slug": "coupler",
+        "name": "Coupler",
+        "url": "/product/coupler.html"
+      },
+      {
+        "slug": "filter",
+        "name": "Filter",
+        "url": "/product/filter.html"
+      },
+      {
+        "slug": "hybrid",
+        "name": "Hybrid",
+        "url": "/product/hybrid.html"
+      },
+      {
+        "slug": "ceramic-filter-173",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter-173.html"
+      },
+      {
+        "slug": "hipa01025353",
+        "name": "HIPA01025353",
+        "url": "/product/hipa01025353.html"
+      },
+      {
+        "slug": "hipa02025353",
+        "name": "HIPA02025353",
+        "url": "/product/hipa02025353.html"
+      },
+      {
+        "slug": "hipa02065250",
+        "name": "HIPA02065250",
+        "url": "/product/hipa02065250.html"
+      },
+      {
+        "slug": "hipa02065555",
+        "name": "HIPA02065555",
+        "url": "/product/hipa02065555.html"
+      },
+      {
+        "slug": "hipa07134747",
+        "name": "HIPA07134747",
+        "url": "/product/hipa07134747.html"
+      },
+      {
+        "slug": "hipa07135050",
+        "name": "HIPA07135050",
+        "url": "/product/hipa07135050.html"
+      },
+      {
+        "slug": "hipa08125050",
+        "name": "HIPA08125050",
+        "url": "/product/hipa08125050.html"
+      },
+      {
+        "slug": "hipa10124747",
+        "name": "HIPA10124747",
+        "url": "/product/hipa10124747.html"
+      },
+      {
+        "slug": "hipa10135050",
+        "name": "HIPA10135050",
+        "url": "/product/hipa10135050.html"
+      },
+      {
+        "slug": "hipa13155750",
+        "name": "HIPA13155750",
+        "url": "/product/hipa13155750.html"
+      },
+      {
+        "slug": "hipa13155753",
+        "name": "HIPA13155753",
+        "url": "/product/hipa13155753.html"
+      },
+      {
+        "slug": "hipa15164643",
+        "name": "HIPA15164643",
+        "url": "/product/hipa15164643.html"
+      },
+      {
+        "slug": "hipat3025250",
+        "name": "HIPAT3025250",
+        "url": "/product/hipat3025250.html"
+      },
+      {
+        "slug": "hipat3035250",
+        "name": "HIPAT3035250",
+        "url": "/product/hipat3035250.html"
+      },
+      {
+        "slug": "hipat4025250",
+        "name": "HIPAT4025250",
+        "url": "/product/hipat4025250.html"
+      },
+      {
+        "slug": "hipat4035049",
+        "name": "HIPAT4035049",
+        "url": "/product/hipat4035049.html"
+      },
+      {
+        "slug": "hipat7015853",
+        "name": "HIPAT7015853",
+        "url": "/product/hipat7015853.html"
+      },
+      {
+        "slug": "hipat7065250",
+        "name": "HIPAT7065250",
+        "url": "/product/hipat7065250.html"
+      },
+      {
+        "slug": "hipa101240vco",
+        "name": "HIPA101240VCO",
+        "url": "/product/hipa101240vco.html"
+      },
+      {
+        "slug": "detector",
+        "name": "Detector",
+        "url": "/product/detector.html"
+      },
+      {
+        "slug": "limiter",
+        "name": "Limiter",
+        "url": "/product/limiter.html"
+      },
+      {
+        "slug": "phase-shifter",
+        "name": "Phase Shifter",
+        "url": "/product/phase-shifter.html"
+      },
+      {
+        "slug": "attenuator",
+        "name": "Attenuator",
+        "url": "/product/attenuator.html"
+      },
+      {
+        "slug": "pin-switch",
+        "name": "PIN Switch",
+        "url": "/product/pin-switch.html"
+      },
+      {
+        "slug": "low-noise-amplifier",
+        "name": "Low Noise Amplifier",
+        "url": "/product/low-noise-amplifier.html"
+      },
+      {
+        "slug": "power-amplifier",
+        "name": "Power Amplifier",
+        "url": "/product/power-amplifier.html"
+      }
+    ],
+    "product_links": [
+      "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator",
+      "attenuator",
+      "ceramic-filter",
+      "ceramic-filter-173",
+      "coupler",
+      "detector",
+      "filter",
+      "hipa01025353",
+      "hipa02025353",
+      "hipa02065250",
+      "hipa02065555",
+      "hipa07134747",
+      "hipa07135050",
+      "hipa08125050",
+      "hipa101240vco",
+      "hipa10124747",
+      "hipa10135050",
+      "hipa13155750",
+      "hipa13155753",
+      "hipa15164643",
+      "hipat3025250",
+      "hipat3035250",
+      "hipat4025250",
+      "hipat4035049",
+      "hipat7015853",
+      "hipat7065250",
+      "hybrid",
+      "limiter",
+      "low-noise-amplifier",
+      "phase-shifter",
+      "pin-switch",
+      "power-amplifier",
+      "power-divider"
+    ]
+  },
+  "passive-components": {
+    "name": "RF MW Component，Ferrite Circulator & Isolator Chinese Manufacturer - HI Microwave",
+    "description": "HI Microwave manufactures Waveguide components,RF Amplifier,RF Switch, RF Filter, RF Coupler, Attenuator, Power Splitter, RF Load,CNC Machining，Waveguide Tuner|Combiner, Ferrite Microstrip|Drop-in|Double-Junction Isolator and Circulator etc.",
+    "subcategories": [
+      {
+        "slug": "power-amplifier",
+        "name": "Power Amplifier",
+        "url": "/product/power-amplifier.html"
+      },
+      {
+        "slug": "low-noise-amplifier",
+        "name": "Low Noise Amplifier",
+        "url": "/product/low-noise-amplifier.html"
+      },
+      {
+        "slug": "pin-switch",
+        "name": "PIN Switch",
+        "url": "/product/pin-switch.html"
+      },
+      {
+        "slug": "attenuator",
+        "name": "Attenuator",
+        "url": "/product/attenuator.html"
+      },
+      {
+        "slug": "phase-shifter",
+        "name": "Phase Shifter",
+        "url": "/product/phase-shifter.html"
+      },
+      {
+        "slug": "limiter",
+        "name": "Limiter",
+        "url": "/product/limiter.html"
+      },
+      {
+        "slug": "detector",
+        "name": "Detector",
+        "url": "/product/detector.html"
+      },
+      {
+        "slug": "ceramic-filter",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter.html"
+      },
+      {
+        "slug": "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator",
+        "name": "Isolator &amp; Circulator",
+        "url": "/product/High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator.html"
+      },
+      {
+        "slug": "power-divider",
+        "name": "Power Divider",
+        "url": "/product/power-divider.html"
+      },
+      {
+        "slug": "coupler",
+        "name": "Coupler",
+        "url": "/product/coupler.html"
+      },
+      {
+        "slug": "filter",
+        "name": "Filter",
+        "url": "/product/filter.html"
+      },
+      {
+        "slug": "hybrid",
+        "name": "Hybrid",
+        "url": "/product/hybrid.html"
+      },
+      {
+        "slug": "ceramic-filter-173",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter-173.html"
+      },
+      {
+        "slug": "hipa01025353",
+        "name": "HIPA01025353",
+        "url": "/product/hipa01025353.html"
+      },
+      {
+        "slug": "hipa02025353",
+        "name": "HIPA02025353",
+        "url": "/product/hipa02025353.html"
+      },
+      {
+        "slug": "hipa02065250",
+        "name": "HIPA02065250",
+        "url": "/product/hipa02065250.html"
+      },
+      {
+        "slug": "hipa02065555",
+        "name": "HIPA02065555",
+        "url": "/product/hipa02065555.html"
+      },
+      {
+        "slug": "hipa07134747",
+        "name": "HIPA07134747",
+        "url": "/product/hipa07134747.html"
+      },
+      {
+        "slug": "hipa07135050",
+        "name": "HIPA07135050",
+        "url": "/product/hipa07135050.html"
+      },
+      {
+        "slug": "hipa08125050",
+        "name": "HIPA08125050",
+        "url": "/product/hipa08125050.html"
+      },
+      {
+        "slug": "hipa10124747",
+        "name": "HIPA10124747",
+        "url": "/product/hipa10124747.html"
+      },
+      {
+        "slug": "hipa10135050",
+        "name": "HIPA10135050",
+        "url": "/product/hipa10135050.html"
+      },
+      {
+        "slug": "hipa13155750",
+        "name": "HIPA13155750",
+        "url": "/product/hipa13155750.html"
+      },
+      {
+        "slug": "hipa13155753",
+        "name": "HIPA13155753",
+        "url": "/product/hipa13155753.html"
+      },
+      {
+        "slug": "hipa15164643",
+        "name": "HIPA15164643",
+        "url": "/product/hipa15164643.html"
+      },
+      {
+        "slug": "hipat3025250",
+        "name": "HIPAT3025250",
+        "url": "/product/hipat3025250.html"
+      },
+      {
+        "slug": "hipat3035250",
+        "name": "HIPAT3035250",
+        "url": "/product/hipat3035250.html"
+      },
+      {
+        "slug": "hipat4025250",
+        "name": "HIPAT4025250",
+        "url": "/product/hipat4025250.html"
+      },
+      {
+        "slug": "hipat4035049",
+        "name": "HIPAT4035049",
+        "url": "/product/hipat4035049.html"
+      },
+      {
+        "slug": "hipat7015853",
+        "name": "HIPAT7015853",
+        "url": "/product/hipat7015853.html"
+      },
+      {
+        "slug": "hipat7065250",
+        "name": "HIPAT7065250",
+        "url": "/product/hipat7065250.html"
+      },
+      {
+        "slug": "hipa101240vco",
+        "name": "HIPA101240VCO",
+        "url": "/product/hipa101240vco.html"
+      },
+      {
+        "slug": "ceramic-filter-173",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter-173.html"
+      },
+      {
+        "slug": "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator",
+        "name": "Isolator &amp; Circulator",
+        "url": "/product/High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator.html"
+      },
+      {
+        "slug": "ceramic-filter",
+        "name": "Ceramic Filter",
+        "url": "/product/ceramic-filter.html"
+      },
+      {
+        "slug": "hybrid",
+        "name": "Hybrid",
+        "url": "/product/hybrid.html"
+      },
+      {
+        "slug": "filter",
+        "name": "Filter",
+        "url": "/product/filter.html"
+      },
+      {
+        "slug": "coupler",
+        "name": "Coupler",
+        "url": "/product/coupler.html"
+      },
+      {
+        "slug": "power-divider",
+        "name": "Power Divider",
+        "url": "/product/power-divider.html"
+      }
+    ],
+    "product_links": [
+      "High-Power-Broadband-Waveguide-Coaxial-Isolator-and-Circulator",
+      "attenuator",
+      "ceramic-filter",
+      "ceramic-filter-173",
+      "coupler",
+      "detector",
+      "filter",
+      "hipa01025353",
+      "hipa02025353",
+      "hipa02065250",
+      "hipa02065555",
+      "hipa07134747",
+      "hipa07135050",
+      "hipa08125050",
+      "hipa101240vco",
+      "hipa10124747",
+      "hipa10135050",
+      "hipa13155750",
+      "hipa13155753",
+      "hipa15164643",
+      "hipat3025250",
+      "hipat3035250",
+      "hipat4025250",
+      "hipat4035049",
+      "hipat7015853",
+      "hipat7065250",
+      "hybrid",
+      "limiter",
+      "low-noise-amplifier",
+      "phase-shifter",
+      "pin-switch",
+      "power-amplifier",
+      "power-divider"
+    ]
+  }
+}
