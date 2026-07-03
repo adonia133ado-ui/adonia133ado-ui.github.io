@@ -1,0 +1,3 @@
+This file is for custom domain binding.
+When you have a domain (e.g. himicrowave.com), replace this file content with your domain name.
+Then go to your GitHub repo Settings → Pages → Custom domain and enter your domain.

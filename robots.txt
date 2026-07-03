@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://adonia133ado-ui.github.io/sitemap.xml
