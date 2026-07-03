@@ -3,22 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HiMicrowave product catalog — RF amplifiers, filters, combiners, waveguide components. Browse by category or search by frequency, gain, and key parameters." />
+  <meta name="description" content="HiMicrowave RF & microwave component catalog — Power Amplifiers, Low Noise Amplifiers, Filters, Combiners, Waveguide. Browse by parameter." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <title>Products | HiMicrowave — RF & Microwave Components</title>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "itemListElement": [
-      {"@type":"Product","name":"HMA-2018 Broadband LNA","category":"RF Amplifier"},
-      {"@type":"Product","name":"HPA-0618 Power Amplifier","category":"RF Amplifier"},
-      {"@type":"Product","name":"HBPF-0408 Bandpass Filter","category":"Filter"},
-      {"@type":"Product","name":"HCB-0104 Power Combiner","category":"Combiner"}
-    ]
-  }
+  {"@context":"https://schema.org","@type":"ItemList","itemListElement":[{"@type":"Product","name":"HMA-2018 Broadband LNA","category":"RF Amplifier"},{"@type":"Product","name":"HPA-0618 Power Amplifier","category":"RF Amplifier"},{"@type":"Product","name":"HBPF-0408 Bandpass Filter","category":"Filter"}]}
   </script>
 </head>
 <body>
@@ -43,54 +34,86 @@
 
 <section class="page-header">
   <div class="container">
-    <h1>Our Products</h1>
-    <p>High-performance RF & microwave components. Filter by category, frequency range, or minimum gain.</p>
+    <h1>Product Catalog</h1>
+    <p>Browse our RF & microwave component portfolio. Use the filters below to narrow by parameters.</p>
   </div>
 </section>
 
-<section class="products-intro section">
+<section class="section" style="padding-top:20px;">
   <div class="container">
-    <!-- Filter controls -->
-    <div class="products-filter">
-      <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
-      <button class="filter-btn" onclick="filterProducts('amplifiers',this)">Amplifiers</button>
-      <button class="filter-btn" onclick="filterProducts('filters',this)">Filters</button>
-      <button class="filter-btn" onclick="filterProducts('combiners',this)">Combiners</button>
-      <button class="filter-btn" onclick="filterProducts('waveguide',this)">Waveguide</button>
+    <!-- Category Tabs -->
+    <div class="cat-tabs" id="catTabs">
+      <div class="cat-tab active" onclick="switchCategory('all',this)">All</div>
+      <div class="cat-tab" onclick="switchCategory('amplifiers',this)">Amplifiers</div>
+      <div class="cat-tab" onclick="switchCategory('filters',this)">Filters</div>
+      <div class="cat-tab" onclick="switchCategory('combiners',this)">Combiners</div>
+      <div class="cat-tab" onclick="switchCategory('waveguide',this)">Waveguide</div>
     </div>
 
-    <!-- Parameter search -->
-    <div style="max-width:800px;margin:0 auto 40px;display:flex;gap:16px;flex-wrap:wrap;justify-content:center;">
-      <div style="display:flex;flex-direction:column;gap:4px;">
-        <label style="font-size:0.75rem;color:#888;text-transform:uppercase;letter-spacing:0.5px;">Min Freq (GHz)</label>
-        <input type="number" id="freqMin" placeholder="e.g. 2" step="0.1" min="0"
-               style="width:110px;padding:8px 12px;background:#262626;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#fff;font-size:0.85rem;">
+    <!-- Filter Bar (RF Lambda style) -->
+    <div class="filter-bar" id="filterBar">
+      <div class="filter-group">
+        <label>Freq Min (GHz)</label>
+        <input type="number" id="freqMin" placeholder="0" step="0.1" min="0">
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;">
-        <label style="font-size:0.75rem;color:#888;text-transform:uppercase;letter-spacing:0.5px;">Max Freq (GHz)</label>
-        <input type="number" id="freqMax" placeholder="e.g. 18" step="0.1" min="0"
-               style="width:110px;padding:8px 12px;background:#262626;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#fff;font-size:0.85rem;">
+      <div class="filter-group">
+        <label>Freq Max (GHz)</label>
+        <input type="number" id="freqMax" placeholder="40" step="0.1" min="0">
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;">
-        <label style="font-size:0.75rem;color:#888;text-transform:uppercase;letter-spacing:0.5px;">Min Gain (dB)</label>
-        <input type="number" id="gainMin" placeholder="e.g. 25" step="0.1"
-               style="width:100px;padding:8px 12px;background:#262626;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#fff;font-size:0.85rem;">
+      <div class="filter-group">
+        <label>Gain Min (dB)</label>
+        <input type="number" id="gainMin" placeholder="0" step="0.1">
       </div>
-      <div style="display:flex;flex-direction:column;gap:4px;justify-content:flex-end;">
-        <button onclick="applyParamFilter()" class="btn-sm" style="padding:8px 20px;cursor:pointer;border:none;">Search</button>
+      <div class="filter-group">
+        <label>NF Max (dB)</label>
+        <input type="number" id="nfMax" placeholder="10" step="0.1" min="0">
+      </div>
+      <div class="filter-group">
+        <label>Connector</label>
+        <select id="connector">
+          <option value="">All</option>
+          <option value="SMA">SMA</option>
+          <option value="2.92mm">2.92mm</option>
+          <option value="2.4mm">2.4mm</option>
+          <option value="1.85mm">1.85mm</option>
+          <option value="WR">Waveguide</option>
+          <option value="SMT">SMT</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label>&nbsp;</label>
+        <div style="display:flex;gap:8px;">
+          <button class="btn-filter" onclick="applyFilter()">Search</button>
+          <button class="btn-reset" onclick="resetFilter()">Reset</button>
+        </div>
       </div>
     </div>
 
-    <!-- Results count -->
-    <p id="resultsCount" style="text-align:center;color:#888;font-size:0.85rem;margin-bottom:24px;"></p>
+    <p class="results-count" id="resultsCount"></p>
 
-    <!-- Product grid -->
-    <div class="products-grid" id="productGrid"></div>
+    <!-- Product Table -->
+    <div class="product-table-wrap">
+      <table class="product-table" id="productTable">
+        <thead>
+          <tr>
+            <th>Model</th>
+            <th>Description</th>
+            <th>Freq (GHz)</th>
+            <th>Gain (dB)</th>
+            <th>P1dB (dBm)</th>
+            <th>NF (dB)</th>
+            <th>VSWR</th>
+            <th>Connector</th>
+            <th style="text-align:center;">Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
 
-    <!-- Empty state -->
     <div id="emptyState" style="display:none;text-align:center;padding:60px 24px;">
       <p style="font-size:1.1rem;color:#888;margin-bottom:12px;">No products match your criteria.</p>
-      <button onclick="resetAllFilters()" class="btn-outline" style="padding:10px 24px;cursor:pointer;">Reset Filters</button>
+      <button onclick="resetFilter()" class="btn-outline" style="padding:10px 24px;cursor:pointer;">Reset Filters</button>
     </div>
   </div>
 </section>
@@ -99,20 +122,15 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <span class="logo-text" style="color:#fff;font-weight:700;font-size:1.2rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
+        <span class="logo-text" style="color:#fff;font-weight:700;font-size:1.1rem;">HI<span style="color:#E02020;">MICROWAVE</span></span>
         <p>Your trusted partner in RF & microwave components. Serving defense, telecom, and industrial customers worldwide.</p>
       </div>
       <div class="footer-col">
         <h5>Products</h5>
-        <a href="products.html?cat=amplifiers">RF Amplifiers</a>
-        <a href="products.html?cat=filters">Filters</a>
-        <a href="products.html?cat=combiners">Combiners & Dividers</a>
-        <a href="products.html?cat=waveguide">Waveguide</a>
-      </div>
-      <div class="footer-col">
-        <h5>Company</h5>
-        <a href="about.html">About Us</a>
-        <a href="contact.html">Contact</a>
+        <a href="products.html" onclick="switchCategory('amplifiers',null)">RF Amplifiers</a>
+        <a href="products.html" onclick="switchCategory('filters',null)">Filters</a>
+        <a href="products.html" onclick="switchCategory('combiners',null)">Combiners & Dividers</a>
+        <a href="products.html" onclick="switchCategory('waveguide',null)">Waveguide</a>
       </div>
       <div class="footer-col">
         <h5>Contact</h5>
@@ -129,7 +147,6 @@
 </footer>
 
 <script>
-// Load products
 let allProducts = [];
 let currentCategory = 'all';
 
@@ -137,69 +154,64 @@ fetch('products.json')
   .then(r => r.json())
   .then(data => {
     allProducts = data;
-    // Check URL param for category
     const params = new URLSearchParams(window.location.search);
     const cat = params.get('cat');
-    if (cat) {
-      currentCategory = cat;
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.toggle('active', b.textContent.toLowerCase().includes(cat) || (cat === 'all' && b.textContent === 'All'));
-      });
-    }
-    renderProducts();
+    if (cat) switchCategory(cat, null);
+    else renderTable();
   })
-  .catch(e => {
-    document.getElementById('productGrid').innerHTML = '<p style="color:#888;text-align:center;">Failed to load product data.</p>';
+  .catch(() => {
+    document.getElementById('tableBody').innerHTML = '<tr><td colspan="9" style="text-align:center;color:#888;padding:40px;">Loading product data...</td></tr>';
   });
 
-function filterProducts(cat, btn) {
+function switchCategory(cat, el) {
   currentCategory = cat;
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  // Clear param inputs
+  if (el) {
+    document.querySelectorAll('.cat-tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+  } else {
+    document.querySelectorAll('.cat-tab').forEach(t => {
+      t.classList.toggle('active', t.textContent.trim().toLowerCase() === cat || (cat === 'all' && t.textContent.trim() === 'All'));
+    });
+  }
+  renderTable();
+}
+
+function applyFilter() { renderTable(); }
+
+function resetFilter() {
   document.getElementById('freqMin').value = '';
   document.getElementById('freqMax').value = '';
   document.getElementById('gainMin').value = '';
-  renderProducts();
-}
-
-function applyParamFilter() {
-  renderProducts();
-}
-
-function resetAllFilters() {
+  document.getElementById('nfMax').value = '';
+  document.getElementById('connector').value = '';
   currentCategory = 'all';
-  document.querySelectorAll('.filter-btn').forEach(b => {
-    b.classList.toggle('active', b.textContent === 'All');
-  });
-  document.getElementById('freqMin').value = '';
-  document.getElementById('freqMax').value = '';
-  document.getElementById('gainMin').value = '';
-  renderProducts();
+  document.querySelectorAll('.cat-tab').forEach(t => t.classList.toggle('active', t.textContent.trim() === 'All'));
+  renderTable();
 }
 
-function renderProducts() {
+function renderTable() {
   const freqMin = parseFloat(document.getElementById('freqMin').value) || 0;
   const freqMax = parseFloat(document.getElementById('freqMax').value) || 999;
   const gainMin = parseFloat(document.getElementById('gainMin').value) || -999;
+  const nfMax = parseFloat(document.getElementById('nfMax').value) || 999;
+  const conn = document.getElementById('connector').value.toUpperCase();
 
   let filtered = allProducts.filter(p => {
-    // Category filter
     if (currentCategory !== 'all' && p.category !== currentCategory) return false;
-    // Frequency range filter: product's freq range overlaps with search range
     if (freqMin > 0 && p.freq_max < freqMin) return false;
     if (freqMax < 999 && p.freq_min > freqMax) return false;
-    // Gain filter
-    if (gainMin > -999 && p.gain !== null && p.gain < gainMin) return false;
+    if (gainMin > -999 && p.gain !== null && p.gain !== undefined && p.gain < gainMin) return false;
+    if (nfMax < 999 && p.nf !== null && p.nf !== undefined && p.nf > nfMax) return false;
+    if (conn && !p.connector.toUpperCase().includes(conn)) return false;
     return true;
   });
 
-  const grid = document.getElementById('productGrid');
-  const empty = document.getElementById('emptyState');
+  const body = document.getElementById('tableBody');
   const count = document.getElementById('resultsCount');
+  const empty = document.getElementById('emptyState');
 
   if (filtered.length === 0) {
-    grid.innerHTML = '';
+    body.innerHTML = '';
     empty.style.display = 'block';
     count.textContent = '';
     return;
@@ -208,57 +220,35 @@ function renderProducts() {
   empty.style.display = 'none';
   count.textContent = `Showing ${filtered.length} product${filtered.length > 1 ? 's' : ''}`;
 
-  grid.innerHTML = filtered.map(p => {
-    const freqLabel = p.freq_min > 0 || p.freq_max > 0
-      ? (p.center_freq ? `Center: ${p.center_freq} GHz` : `${p.freq_min}-${p.freq_max} ${p.freq_unit}`)
-      : 'N/A';
-    const gainLabel = p.gain !== null && p.gain !== undefined
-      ? `Gain: ${p.gain} ${p.gain_unit}`
-      : 'Passive';
-    const nfLabel = p.nf !== null && p.nf !== undefined
-      ? `NF: ${p.nf} ${p.nf_unit}`
-      : '';
-    const p1dbLabel = p.p1db !== null && p.p1db !== undefined
-      ? `P1dB: ${p.p1db} ${p.p1db_unit}`
-      : '';
+  body.innerHTML = filtered.map(p => {
+    const freq = p.center_freq
+      ? `Center: ${p.center_freq}`
+      : `${p.freq_min}-${p.freq_max}`;
+    const gain = p.gain !== null && p.gain !== undefined ? p.gain : '\u2014';
+    const p1db = p.p1db !== null && p.p1db !== undefined ? p.p1db : '\u2014';
+    const nf = p.nf !== null && p.nf !== undefined ? p.nf : '\u2014';
+    const vswr = p.vswr_in || '\u2014';
+    const dsLink = p.datasheet ? `datasheets/${p.datasheet.split('/').pop()}` : '';
 
-    return `<div class="product-card" data-category="${p.category}">
-      <div class="product-card-body">
-        <span class="tag">${categoryLabel(p.category)}</span>
-        <h3>${p.model} — ${p.name}</h3>
-        <div class="specs">
-          <strong>Freq:</strong> ${freqLabel}<br/>
-          <strong>${gainLabel}</strong><br/>
-          ${nfLabel ? `<strong>${nfLabel}</strong><br/>` : ''}
-          ${p1dbLabel ? `<strong>${p1dbLabel}</strong><br/>` : ''}
-          <strong>VSWR:</strong> ${p.vswr_in}<br/>
-          <strong>Connector:</strong> ${p.connector}
-        </div>
-        <p style="font-size:0.85rem;color:#888;margin-bottom:16px;line-height:1.6;">${p.description}</p>
-        <div class="product-card-actions">
-          <a href="${p.datasheet}" class="btn-sm" target="_blank">&#128196; Datasheet</a>
-          <a href="contact.html?product=${p.model}" class="btn-ghost">Request Quote &rarr;</a>
-        </div>
-      </div>
-    </div>`;
+    return `<tr>
+      <td>${p.model}</td>
+      <td style="color:var(--gray);max-width:220px;">${p.name}</td>
+      <td>${freq}</td>
+      <td>${gain}</td>
+      <td>${p1db}</td>
+      <td>${nf}</td>
+      <td>${vswr}</td>
+      <td>${p.connector}</td>
+      <td>
+        ${dsLink ? `<a href="${dsLink}" class="btn-table" target="_blank">PDF</a>` : ''}
+        <a href="contact.html?product=${p.model}" class="btn-table-ghost">Quote</a>
+      </td>
+    </tr>`;
   }).join('');
 }
 
-function categoryLabel(cat) {
-  const labels = {
-    amplifiers: 'Amplifier',
-    filters: 'Filter',
-    combiners: 'Combiner / Divider',
-    waveguide: 'Waveguide'
-  };
-  return labels[cat] || cat;
-}
-
-// Mobile menu close
 document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => {
-    document.getElementById('navLinks').classList.remove('active');
-  });
+  a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
 });
 </script>
 </body>
